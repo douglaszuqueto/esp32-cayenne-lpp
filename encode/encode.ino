@@ -9,9 +9,9 @@ void setup() {
 
 void loop() {
   lpp.reset();
-  lpp.addTemperature(1, 25);
-  lpp.addTemperature(2, 22.5);
-  lpp.addRelativeHumidity(1, 90);
+  lpp.addTemperature(1, 27.2);
+  lpp.addTemperature(2, 25.5);
+  lpp.addRelativeHumidity(1, 95);
   lpp.addRelativeHumidity(2, 87);
 
   uint8_t *payload = lpp.getBuffer();
@@ -25,7 +25,7 @@ void loop() {
   }
 
   Serial.println();
-  Serial.println("############### LOOP ###############");
+  Serial.println("################### LOOP ###################");
 
   Serial.print("HEX: ");
   Serial.print(payloadString);
