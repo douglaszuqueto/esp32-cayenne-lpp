@@ -32,6 +32,8 @@ Basicamente a estrutura da payload é dividida em: canal, tipo e o valor da mens
 |---|---|---|---|---|---|---|
 |Data1 Ch.|Data1 Type|Data1|Data2 Ch.|Data2 Type|Data2 | ...
 
+*[fonte](https://mydevices.com/cayenne/docs/lora/#lora-cayenne-low-power-payload)*
+
 ### Tipos suportados
 
 | Type | IPSO | LPP | Hex | Data size | Data Resolution per bit
@@ -48,6 +50,8 @@ Accelerometer|3313|113|71|6|0.001 G Signed MSB per axis
 Barometer|3315|115|73|2|0.1 hPa Unsigned MSB
 Gyrometer|3334|134|86|6|0.01 °/s Signed MSB per axis
 GPS Location|3336|136|88|9|Latitude : 0.0001 ° Signed MSB
+
+*[fonte](https://mydevices.com/cayenne/docs/lora/#lora-cayenne-low-power-payload)*
 
 ### Exemplos
 
@@ -86,6 +90,9 @@ Caso o resultado final(depois de chegar na API e fazer o decode) seja um JSON, e
 ```
 
 ### Encode
+
+* [arquivo .ino](https://raw.githubusercontent.com/douglaszuqueto/esp32-cayenne-lpp/master/encode/encode.ino)
+
 ```c
 #include <Arduino.h>
 #include <CayenneLPP.h>
@@ -126,6 +133,9 @@ void loop() {
 ```
 
 ### Decode
+
+* [arquivo .ino](https://raw.githubusercontent.com/douglaszuqueto/esp32-cayenne-lpp/master/decode/decode.ino)
+
 ```c
 #include <Arduino.h>
 #include <CayenneLPP.h>
