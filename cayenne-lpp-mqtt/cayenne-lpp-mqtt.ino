@@ -1,12 +1,10 @@
 #include <WiFi.h>
-#include <Ticker.h>
 #include <PubSubClient.h>
 #include <CayenneLPP.h>
 
 WiFiClient espClient;
 PubSubClient mqtt(espClient);
 CayenneLPP lpp(51);
-
 
 #define LED_BUILTIN 2
 
